@@ -66,3 +66,129 @@ html, body {
     background-size: cover;
     text-align: center;
 }
+
+#divMenu {
+    background-color: white;
+    width: 1250px;
+    height: 650px;
+    display: block;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    border: thin solid #CDCECF;
+}
+
+
+#divEmpty {
+    width: 350px;
+    height: 100%;
+    border-right: 2px solid #CDCECF;
+    float: left;
+}
+
+#divMenuLogin {
+    width: 800px;
+    height: 650px;
+    float: right;
+}
+
+#divLoginTitle {
+    margin-top: 80px;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#loginTitle {
+    font-size: 35px;
+}
+
+#divLoginInfo {
+    margin-top: 80px;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#loginInfo {
+    font-size: 20px;
+}
+
+#divLoginEmailLabel, #divloginPasswordLabel {
+    margin-top: 40px;
+    width: 100px;
+    text-align: left;
+    margin-left: 80px;
+    margin-right: 50px;
+}
+
+#loginEmailLabel, #loginPasswordLabel {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#divLoginEmailText, #divloginPasswordText {
+    display: inline-block;
+    width: 250px;
+    text-align: left;
+    position: relative;
+    bottom: 32px;
+    right: 100px;
+}
+
+#loginEmailText, #loginPasswordText {
+    height: 30px;
+    width: 100%;
+    font-size: 20px;
+}
+
+
+#divButtonLogin {
+    width: 200px;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 170px;
+    margin-right: 50px;
+}
+
+#buttonLogin {
+    background-color: #2196F3;
+    width: 100%;
+    height: 30px;
+    margin-top: 15px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+    #buttonLogin:hover {
+        background: #0b7dda;
+        width: 100%;
+        height: 30px;
+        cursor: pointer;
+    }
+
+@media only screen and (max-width:920px) {
+    #divLogo {
+        display: none;
+    }
+
+    #divAutentification {
+        float: none;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width:1350px) {
+    #divSearch {
+        display: none;
+    }
+
+    #divEmpty {
+        display: none;
+    }
+
+    #divMenu {
+        width: 800px;
+    }
+}

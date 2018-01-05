@@ -132,13 +132,19 @@
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
     <Content Include="Default.aspx" />
+    <Content Include="EditProfile.aspx" />
     <Content Include="images\background.jpg" />
     <Content Include="images\camera.png" />
     <Content Include="images\image.jpg" />
+    <Content Include="images\profile.jpg" />
+    <Content Include="InsertImage.aspx" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="Profile.aspx" />
     <Content Include="SignUpPage.aspx" />
+    <Content Include="styles\editProfilePage.css" />
     <Content Include="styles\firstPage.css" />
-    <Content Include="styles\logInPage.css" />
+    <Content Include="styles\loginPage.css" />
+    <Content Include="styles\profilePag.css" />
     <Content Include="styles\signUpPage.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -152,12 +158,36 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerImage.ashx.cs">
+      <DependentUpon>HandlerImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="InsertImage.aspx.cs">
+      <DependentUpon>InsertImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertImage.aspx.designer.cs">
+      <DependentUpon>InsertImage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignUpPage.aspx.cs">
@@ -172,6 +202,7 @@
     <Folder Include="ImageThumbnail\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HandlerImage.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

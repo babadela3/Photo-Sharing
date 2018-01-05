@@ -26,5 +26,6 @@ namespace PhotoSharing
             Server.Transfer("SignUpPage.aspx", true);
         }
 
+
     }
 }
