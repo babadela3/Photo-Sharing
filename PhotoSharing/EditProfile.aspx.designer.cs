@@ -85,13 +85,22 @@ namespace PhotoSharing {
         protected global::System.Web.UI.WebControls.TextBox editEmailText;
         
         /// <summary>
-        /// editPasswordText control.
+        /// editNameText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox editPasswordText;
+        protected global::System.Web.UI.WebControls.TextBox editNameText;
+        
+        /// <summary>
+        /// editCityText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox editCityText;
         
         /// <summary>
         /// buttonEdit control.
@@ -101,5 +110,14 @@ namespace PhotoSharing {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button buttonEdit;
+        
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

@@ -63,46 +63,22 @@
         </div>
         <div id="divOptions">
             <div class="options">
-                <label id="optionUpload">Upload</label>
+                <asp:LinkButton Id="optionUpload" runat="server" Font-Underline="False" OnClick="AddImage">Upload</asp:LinkButton>
+            </div>
+            <div class="options">
+                <asp:LinkButton Id="optionCreate" runat="server" Font-Underline="False" OnClick="CreateAlbum">Create</asp:LinkButton>
             </div>
             <div class="options">
                 <label id="optionPhotos">Photos</label>
             </div>
             <div class="options">
-                <label id="optionAlbums">Albums</label>
+                <asp:LinkButton Id="optionAlbums" runat="server" Font-Underline="False" OnClick="SeeAlbums">Albums</asp:LinkButton>
             </div>
         </div>
+        
+    
         <div id="divMenu">
-            <div class="divImg">
-                <img class="imgPresentation" src="images/image.jpg" />
-                <div class="description">
-                    <label>Descriere</label>
-                </div>
-            </div>
-            <div class="divImg">
-                <img class="imgPresentation" src="images/image.jpg" />
-                <div class="description">
-                    <label>Descriere</label>
-                </div>
-            </div>
-            <div class="divImg">
-                <img class="imgPresentation" src="images/image.jpg" />
-                <div class="description">
-                    <label>Descriere</label>
-                </div>
-            </div>
-            <div class="divImg">
-                <img class="imgPresentation" src="images/image.jpg" />
-                <div class="description">
-                    <label>Descriere</label>
-                </div>
-            </div>
-            <div class="divImg">
-                <img class="imgPresentation" src="images/image.jpg" />
-                <div class="description">
-                    <label>Descriere</label>
-                </div>
-            </div>
+            <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
         </div>
 
     </form>

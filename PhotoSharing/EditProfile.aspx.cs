@@ -10,33 +10,31 @@ using System.IO;
 
 namespace PhotoSharing
 {
+    
     public partial class EditProfile : System.Web.UI.Page
     {
-        private SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\MINDIT-PC\source\repos\PhotoSharing\PhotoSharing\App_Data\Database.mdf;Integrated Security=True");
 
         protected void Page_Load(object sender, EventArgs e)
         {
             string email = (string)(Session["email"]);
+            string name = (string)(Session["name"]);
+            string city = (string)(Session["city"]);
+            string id = (string)(Session["id"]);
 
-            string query = "select * from dbo.Users where Email = '" + email + "'";
+            if(email != String.Empty){
 
-            SqlCommand cmd = new SqlCommand(query, con);
-            con.Open();
-            SqlDataReader dataReader = cmd.ExecuteReader();
-            if (dataReader.Read())
-            {
-                int id = Int32.Parse(dataReader[0].ToString());
                 ImageProfile.ImageUrl = "~/HandlerImage.ashx?id=" + id;
-                string name = dataReader[3].ToString();
-
                 profileName.Text = name;
                 profileEmail.Text = email;
+                editEmailText.Text = email;
+                editNameText.Text = name;
+                editCityText.Text = city;
+
             }
             else
             {
                 Response.Redirect("LoginPage.aspx");
             }
-            con.Close();
         }
 
         protected void TransferDefault(object sender, EventArgs e)
@@ -54,5 +52,7 @@ namespace PhotoSharing
             Session["email"] = profileEmail.Text;
             Response.Redirect("Profile.aspx");
         }
+
+
     }
 }

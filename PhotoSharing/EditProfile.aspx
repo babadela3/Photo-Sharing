@@ -2,10 +2,25 @@
 
 <!DOCTYPE html>
 
+<script runat="server">
+    private void Save(Object source, EventArgs e) {
+        try {
+            SqlDataSource1.Update();
+            Session["email"] = editEmailText.Text;
+            Server.Transfer("Profile.aspx");
+        }
+        catch (Exception except) {
+            // Handle the Exception.
+            Session["email"] = editEmailText.Text;
+            Server.Transfer("Profile.aspx");
+        }        
+    }
+</script>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="~/styles/editProfilePage.css" rel="stylesheet" type="text/css" />
+    <link href="~/styles/editProfile.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -78,17 +93,36 @@
                 <div id="divEditEmailText">
                     <asp:TextBox ID="editEmailText" ReadOnly="true" runat="server" />
                 </div>
-                <div id="divEditPasswordLabel">
-                    <label id="editPasswordLabel">Password</label>
+                <div id="divEditNameLabel">
+                    <label id="editNameLabel">Name</label>
                 </div>
-                <div id="divEditPasswordText">
-                    <asp:TextBox ID="editPasswordText" TextMode="password" runat="server" />
+                <div id="divEditNameText">
+                    <asp:TextBox ID="editNameText" runat="server" />
+                </div>
+                <div id="divEditCityLabel">
+                    <label id="editCityLabel">City</label>
+                </div>
+                <div id="divEditCityText">
+                    <asp:TextBox ID="editCityText" runat="server" />
                 </div>
                 <div id="divButtonEdit">
-                    <asp:Button ID="buttonEdit" Text="Save" runat="server"/>
+                    <asp:Button ID="buttonEdit" Text="Save" OnClick="Save" runat="server"/>
                 </div>
+
             </div>
         </div>
+
+        <asp:SqlDataSource
+          id="SqlDataSource1"
+          runat="server"
+          ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\MINDIT-PC\source\repos\PhotoSharing\PhotoSharing\App_Data\Database.mdf;Integrated Security=True"
+          UpdateCommand="UPDATE Users SET Name=@Name,City=@City WHERE Email=@Email">
+          <UpdateParameters>
+              <asp:ControlParameter Name="Name" ControlId="editNameText" PropertyName="Text" />
+              <asp:ControlParameter Name="City" ControlId="editCityText" PropertyName="Text" />
+              <asp:ControlParameter Name="Email" ControlId="editEmailText" PropertyName="Text" />
+          </UpdateParameters>
+      </asp:SqlDataSource>
     </form>
 </body>
 </html>

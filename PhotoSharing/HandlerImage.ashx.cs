@@ -5,6 +5,8 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace PhotoSharing
 {
@@ -31,7 +33,7 @@ namespace PhotoSharing
             da.Fill(dt);
 
             byte[] image = (byte[])dt.Rows[0][6];
-
+            
             context.Response.ContentType = "image/jpeg";
             context.Response.ContentType = "image/jpg";
             context.Response.ContentType = "image/png";
