@@ -77,7 +77,8 @@ namespace PhotoSharing
 
         protected void TransferLogIn(object sender, EventArgs e)
         {
-            Server.Transfer("LoginPage.aspx", true);
+            Session.Abandon();
+            Response.Redirect("LoginPage.aspx");
         }
 
         protected void EditProfile(object sender, EventArgs e)

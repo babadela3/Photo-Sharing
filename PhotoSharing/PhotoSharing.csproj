@@ -143,7 +143,9 @@
     <Content Include="images\profile.jpg" />
     <Content Include="InsertImage.aspx" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="ProfilAdminImages.aspx" />
     <Content Include="Profile.aspx" />
+    <Content Include="ProfileAdmin.aspx" />
     <Content Include="ProfileAlbumPhotos.aspx" />
     <Content Include="ProfileAlbums.aspx" />
     <Content Include="SearchPhoto.aspx" />
@@ -155,6 +157,7 @@
     <Content Include="styles\editProfile.css" />
     <Content Include="styles\defaultPage.css" />
     <Content Include="styles\loginPage.css" />
+    <Content Include="styles\profileAdmin.css" />
     <Content Include="styles\profileAlbum.css" />
     <Content Include="styles\profileAlbumPhotos.css" />
     <Content Include="styles\profilePag.css" />
@@ -215,12 +218,26 @@
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ProfilAdminImages.aspx.cs">
+      <DependentUpon>ProfilAdminImages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfilAdminImages.aspx.designer.cs">
+      <DependentUpon>ProfilAdminImages.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileAdmin.aspx.cs">
+      <DependentUpon>ProfileAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfileAdmin.aspx.designer.cs">
+      <DependentUpon>ProfileAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProfileAlbumPhotos.aspx.cs">
       <DependentUpon>ProfileAlbumPhotos.aspx</DependentUpon>

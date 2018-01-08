@@ -74,12 +74,14 @@ namespace PhotoSharing
 
         protected void TransferDefault(object sender, EventArgs e)
         {
-            Server.Transfer("Default.aspx", true);
+            Session.Abandon();
+            Response.Redirect("Default.aspx");
         }
 
         protected void TransferLogIn(object sender, EventArgs e)
         {
-            Server.Transfer("LoginPage.aspx", true);
+            Session.Abandon();
+            Response.Redirect("LoginPage.aspx");
         }
 
         protected void EditProfile(object sender, EventArgs e)

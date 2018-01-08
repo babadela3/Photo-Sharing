@@ -100,7 +100,6 @@ namespace PhotoSharing
 
         void DeleteComment(object sender, EventArgs e)
         {
-            Response.Write("<script>alert('Data inserted successfully')</script>");
             LinkButton div = (LinkButton)sender;
 
             string query = "delete from dbo.Comments where Id = " + Int32.Parse(div.ID);
