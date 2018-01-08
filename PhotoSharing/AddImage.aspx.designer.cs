@@ -94,6 +94,15 @@ namespace PhotoSharing {
         protected global::System.Web.UI.WebControls.FileUpload editNameText;
         
         /// <summary>
+        /// editImageDrop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList editImageDrop;
+        
+        /// <summary>
         /// editCityText control.
         /// </summary>
         /// <remarks>
@@ -112,13 +121,13 @@ namespace PhotoSharing {
         protected global::System.Web.UI.WebControls.TextBox editLocationText;
         
         /// <summary>
-        /// editCategoryText control.
+        /// editCategoryDrop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox editCategoryText;
+        protected global::System.Web.UI.WebControls.DropDownList editCategoryDrop;
         
         /// <summary>
         /// editAlbumText control.

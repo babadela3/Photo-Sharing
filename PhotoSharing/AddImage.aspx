@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="~/styles/addImage.css" rel="stylesheet" type="text/css" />
+    <link href="~/styles/addImagePage.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -84,6 +84,20 @@
                 <div id="divEditNameText">
                     <asp:FileUpload id="editNameText" runat="server" />
                 </div>
+                <div id="divEditImageLabel">
+                    <label id="editImageLabel">Filter</label>
+                </div>
+                <div id="divEditImageText">
+                    <asp:DropDownList id="editImageDrop"
+                        AutoPostBack="True"
+                        runat="server">
+                        <asp:ListItem>None</asp:ListItem>
+                        <asp:ListItem>Sepia</asp:ListItem>
+                        <asp:ListItem>Grayscale</asp:ListItem>
+                        <asp:ListItem>Negative</asp:ListItem>
+                        <asp:ListItem>Contrast</asp:ListItem>
+                   </asp:DropDownList>
+                </div>
                 <div id="divEditCityLabel">
                     <label id="editCityLabel">Description</label>
                 </div>
@@ -100,7 +114,17 @@
                     <label id="editCategoryLabel">Category</label>
                 </div>
                 <div id="divEditCategoryText">
-                    <asp:TextBox ID="editCategoryText" runat="server" />
+                    <asp:DropDownList id="editCategoryDrop"
+                        AutoPostBack="True"
+                        runat="server">
+                        <asp:ListItem>Animal</asp:ListItem>
+                        <asp:ListItem>Architecture</asp:ListItem>
+                        <asp:ListItem>Food</asp:ListItem>
+                        <asp:ListItem>Landscape</asp:ListItem>
+                        <asp:ListItem>Nature</asp:ListItem>
+                        <asp:ListItem>Portrait</asp:ListItem>
+                        <asp:ListItem>Objects</asp:ListItem>
+                   </asp:DropDownList>
                 </div>
                 <div id="divEditAlbumLabel">
                     <label id="editAlbumLabel">Album</label>

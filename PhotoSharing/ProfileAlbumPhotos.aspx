@@ -25,7 +25,7 @@
 
             <div id="divAutentification">
 
-                <asp:LinkButton Id="profile" runat="server" Font-Underline="False" >Profile</asp:LinkButton>                
+                <asp:LinkButton Id="profile" runat="server" Font-Underline="False" OnClick="TransferProfile">Profile</asp:LinkButton>                
 
                 <label id="line">|</label>
 

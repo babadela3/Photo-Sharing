@@ -1,0 +1,101 @@
+﻿html, body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    text-align: center;
+}
+
+
+#Image {
+    width: 100%;
+    height: 100%;
+}
+
+#divMenu {
+    background-color: white;
+    width: 1005px;
+    height: 550px;
+    display: block;
+    margin: auto;
+    margin-top: 140px;
+    margin-bottom: 100px;
+    border: thin solid #CDCECF;
+}
+#divEmpty {
+    width: 700px;
+    height: 100%;
+    border-right: thin solid #CDCECF;
+    float: left;
+}
+
+#divProfileInfo {
+    width: 200px;
+    float: left;
+    position: relative;
+    top:32px;
+    left:22px;
+    font-size: 20px;
+    text-align:left;
+}
+
+#divProfileName {
+    display: inline-block;
+}
+
+#divMenuLogin {
+    width: 300px;
+    height: 500px;
+    float: left;
+    overflow: scroll;
+    position: relative;
+}
+
+#divProfile {
+    height: 100px;
+    width: 300px;
+    border-bottom: 2px solid #CDCECF;
+}
+
+.comment {
+    text-align:left;
+    padding:10px;
+}
+
+#header-content {
+    margin-top:8px;
+    float: left;
+    position: relative;
+}
+
+#commentText {
+    width: 290px;
+    height: 30px;
+    margin: auto;
+    margin-bottom: 10px;
+    position: relative;
+    left: 5px;
+}
+
+.roundedcorners {
+    border-radius: 50px;
+    width: 75px;
+    height: 75px;
+    border: 2px solid #CDCECF;
+    position:relative;
+    top:10px;
+    left:10px;
+}
+
+#divProfilePicture {
+    width: 75px;
+    height: 75px;
+    float: left;
+}
+
+.commentName {
+    font-weight: bold;
+}
+
+.underlinedLinkButton {
+    color:black;
+}

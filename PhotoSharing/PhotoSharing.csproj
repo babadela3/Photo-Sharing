@@ -146,15 +146,20 @@
     <Content Include="Profile.aspx" />
     <Content Include="ProfileAlbumPhotos.aspx" />
     <Content Include="ProfileAlbums.aspx" />
+    <Content Include="SearchPhoto.aspx" />
+    <Content Include="SeePhoto.aspx" />
+    <Content Include="SeePhotoComment.aspx" />
     <Content Include="SignUpPage.aspx" />
-    <Content Include="styles\addImage.css" />
+    <Content Include="styles\addImagePage.css" />
     <Content Include="styles\CreateAlbum.css" />
     <Content Include="styles\editProfile.css" />
-    <Content Include="styles\firstPage.css" />
+    <Content Include="styles\defaultPage.css" />
     <Content Include="styles\loginPage.css" />
     <Content Include="styles\profileAlbum.css" />
     <Content Include="styles\profileAlbumPhotos.css" />
     <Content Include="styles\profilePag.css" />
+    <Content Include="styles\seePhoto.css" />
+    <Content Include="styles\seePhotoComment.css" />
     <Content Include="styles\signUpPage.css" />
     <Content Include="UpdateUser.aspx" />
     <Content Include="Web.config">
@@ -232,6 +237,27 @@
       <DependentUpon>ProfileAlbums.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchPhoto.aspx.cs">
+      <DependentUpon>SearchPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchPhoto.aspx.designer.cs">
+      <DependentUpon>SearchPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SeePhoto.aspx.cs">
+      <DependentUpon>SeePhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SeePhoto.aspx.designer.cs">
+      <DependentUpon>SeePhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SeePhotoComment.aspx.cs">
+      <DependentUpon>SeePhotoComment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SeePhotoComment.aspx.designer.cs">
+      <DependentUpon>SeePhotoComment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SignUpPage.aspx.cs">
       <DependentUpon>SignUpPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

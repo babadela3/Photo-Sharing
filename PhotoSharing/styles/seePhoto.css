@@ -1,0 +1,22 @@
+﻿html, body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    text-align: center;
+}
+
+
+#Image {
+    width: 100%;
+    height: 100%;
+}
+
+#divMenu {
+    background-color: white;
+    width: 700px;
+    height: 550px;
+    display: block;
+    margin: auto;
+    margin-top: 140px;
+    border: thin solid #CDCECF;
+}

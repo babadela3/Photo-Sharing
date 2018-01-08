@@ -53,8 +53,10 @@ namespace PhotoSharing
    
                 HtmlGenericControl myDiv = new HtmlGenericControl("div");
                 myDiv.Attributes["class"] = "divImg";
-                System.Web.UI.WebControls.Image imageUpload = new System.Web.UI.WebControls.Image();
-                imageUpload.ImageUrl = "~/HandlerPhoto.ashx?id=" + id ;
+                ImageButton imageUpload = new ImageButton();
+                imageUpload.ImageUrl = "~/HandlerPhoto.ashx?id=" + id;
+                imageUpload.Click += new ImageClickEventHandler(ClickImage);
+                imageUpload.ID = id;
                 imageUpload.Attributes["class"] = "imgPresentation";
                 HtmlGenericControl divDescription = new HtmlGenericControl("div");
                 divDescription.Attributes["class"] = "description";
@@ -71,12 +73,15 @@ namespace PhotoSharing
 
         protected void TransferDefault(object sender, EventArgs e)
         {
-            Server.Transfer("Default.aspx", true);
+            Session["isLog"] = "true";
+            Session["email"] = profileEmail.Text;
+            Response.Redirect("Default.aspx");
         }
 
         protected void TransferLogIn(object sender, EventArgs e)
         {
-            Server.Transfer("LoginPage.aspx", true);
+            Session.Abandon();
+            Response.Redirect("LoginPage.aspx");
         }
 
         protected void EditProfile(object sender, EventArgs e)
@@ -110,7 +115,13 @@ namespace PhotoSharing
             Response.Redirect("ProfileAlbums.aspx");
         }
 
-
-
+        protected void ClickImage(object sender, EventArgs e)
+        {
+            ImageButton div = (ImageButton)sender;
+            Session["email"] = profileEmail.Text;
+            Session["photoId"] = div.ID;
+            Session["idUser"] = idUser;
+            Response.Redirect("SeePhotoComment.aspx");
+        }
     }
 }

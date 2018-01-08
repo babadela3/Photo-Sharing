@@ -118,5 +118,11 @@ namespace PhotoSharing
             Session["albumId"] = div.ID;
             Response.Redirect("ProfileAlbumPhotos.aspx");
         }
+
+        protected void TransferProfile(object sender, EventArgs e)
+        {
+            Session["email"] = profileEmail.Text;
+            Response.Redirect("Profile.aspx");
+        }
     }
 }
