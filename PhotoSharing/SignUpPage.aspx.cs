@@ -29,6 +29,14 @@ namespace PhotoSharing
             Server.Transfer("LoginPage.aspx", true);
         }
 
+        protected void Search(object sender, EventArgs e)
+        {
+            Session["email"] = "";
+            Session["option"] = RadioButton1.SelectedValue;
+            Session["search"] = searchBar.Text;
+            Response.Redirect("SearchPhoto.aspx");
+        }
+
         protected void CreateAccount(object sender, EventArgs e)
         {
             if (IsValidEmail(createEmailText.Text))

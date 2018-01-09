@@ -19,6 +19,14 @@ namespace PhotoSharing
             
         }
 
+        protected void Search(object sender, EventArgs e)
+        {
+            Session["email"] = "";
+            Session["option"] = RadioButton1.SelectedValue;
+            Session["search"] = searchBar.Text;
+            Response.Redirect("SearchPhoto.aspx");
+        }
+
         protected void TransferDefault(object sender, EventArgs e)
         {
             Server.Transfer("Default.aspx", true);

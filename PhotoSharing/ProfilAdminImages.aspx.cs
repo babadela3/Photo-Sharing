@@ -115,5 +115,13 @@ namespace PhotoSharing
             Session["email"] = profileName.Text;
             Response.Redirect("ProfileAdmin.aspx");
         }
+
+        protected void Search(object sender, EventArgs e)
+        {
+            Session["email"] = profileName.Text;
+            Session["option"] = RadioButton1.SelectedValue;
+            Session["search"] = searchBar.Text;
+            Response.Redirect("SearchPhoto.aspx");
+        }
     }
 }

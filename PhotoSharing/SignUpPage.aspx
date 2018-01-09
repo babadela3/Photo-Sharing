@@ -20,7 +20,13 @@
 
             <div id="divSearch">
 
-                <input id="searchBar" type="text" placeholder="Search..." />
+                <asp:TextBox ID="searchBar" placeholder="Search..." runat="server" OnTextChanged="Search"  />
+                
+                <asp:RadioButtonList ID="RadioButton1"  runat="server" RepeatDirection="Horizontal">
+                    <asp:ListItem Value ="1">Caregory</asp:ListItem>
+                    <asp:ListItem Value ="2">Location</asp:ListItem>
+                    <asp:ListItem Value ="3">Description</asp:ListItem>
+                </asp:RadioButtonList>
 
             </div>
 

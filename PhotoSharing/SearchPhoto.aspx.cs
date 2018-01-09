@@ -69,6 +69,13 @@ namespace PhotoSharing
             Response.Redirect("Profile.aspx");
         }
 
+        protected void TransferDefault(object sender, EventArgs e)
+        {
+            Session["isLog"] = "true";
+            Session["email"] = email;
+            Response.Redirect("Default.aspx");
+        }
+
         protected void ClickImage(object sender, EventArgs e)
         {
             if (checkEmail)

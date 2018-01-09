@@ -152,7 +152,7 @@
     <Content Include="SeePhoto.aspx" />
     <Content Include="SeePhotoComment.aspx" />
     <Content Include="SignUpPage.aspx" />
-    <Content Include="styles\addImagePage.css" />
+    <Content Include="styles\addImage.css" />
     <Content Include="styles\CreateAlbum.css" />
     <Content Include="styles\editProfile.css" />
     <Content Include="styles\defaultPage.css" />

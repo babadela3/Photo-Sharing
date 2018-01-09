@@ -38,6 +38,7 @@ namespace PhotoSharing
 
             string query = "select alb.Name, alb.Id from dbo.Users usr join dbo.Albums alb on (alb.UserId = usr.Id) where usr.Email = '" + email + "'";
 
+            editAlbumText.Items.Clear();
             SqlCommand cmd = new SqlCommand(query, con);
             con.Open();
             SqlDataReader dataReader = cmd.ExecuteReader();

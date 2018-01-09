@@ -15,7 +15,7 @@
 
             <div id="divLogo">
 
-                <asp:ImageButton  ID="logoImg" runat="server" ImageAlign="Bottom" ImageUrl="images/camera.png" />                
+                <asp:ImageButton  ID="logoImg" runat="server" ImageAlign="Bottom" ImageUrl="images/camera.png" OnClick="TransferDefault" />                
 
             </div>
 

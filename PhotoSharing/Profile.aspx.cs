@@ -42,6 +42,7 @@ namespace PhotoSharing
                 Response.Redirect("LoginPage.aspx");
             }
             con.Close();
+            DisplayInfo();
 
             string queryImages = "select Id, Description from dbo.Photos where UserId = " + idUser + " order by Date desc;";
             SqlCommand command = new SqlCommand(queryImages, con);
@@ -76,6 +77,14 @@ namespace PhotoSharing
             Session["isLog"] = "true";
             Session["email"] = profileEmail.Text;
             Response.Redirect("Default.aspx");
+        }
+
+        protected void Search(object sender, EventArgs e)
+        {
+            Session["email"] = profileEmail.Text;
+            Session["option"] = RadioButton1.SelectedValue;
+            Session["search"] = searchBar.Text;
+            Response.Redirect("SearchPhoto.aspx");
         }
 
         protected void TransferLogIn(object sender, EventArgs e)
@@ -122,6 +131,42 @@ namespace PhotoSharing
             Session["photoId"] = div.ID;
             Session["idUser"] = idUser;
             Response.Redirect("SeePhotoComment.aspx");
+        }
+
+        public void DisplayInfo() {
+            string query = "select count(*) from dbo.Photos where UserId = " + Int32.Parse(idUser) + ";";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            SqlDataReader dataReader = cmd.ExecuteReader();
+            if (dataReader.Read())
+            {
+                profilePhotos.Text = dataReader[0].ToString() + " photos";
+            }
+            con.Close();
+
+            string queryAlbums = "select count(*) from dbo.Albums where UserId = " + Int32.Parse(idUser) + ";";
+
+            SqlCommand cmdAlbums = new SqlCommand(queryAlbums, con);
+            con.Open();
+            SqlDataReader dataReaderAlbums = cmd.ExecuteReader();
+            if (dataReaderAlbums.Read())
+            {
+                profileAlbums.Text = dataReaderAlbums[0].ToString() + " albums";
+            }
+            con.Close();
+
+            string queryComments = "select count(*) from dbo.Comments where UserId = " + Int32.Parse(idUser) + ";";
+
+            SqlCommand cmdComments = new SqlCommand(queryComments, con);
+            con.Open();
+            SqlDataReader dataReaderComments = cmd.ExecuteReader();
+            if (dataReaderComments.Read())
+            {
+                profileComments.Text = dataReaderComments[0].ToString() + " comments";
+            }
+            con.Close();
+
         }
     }
 }

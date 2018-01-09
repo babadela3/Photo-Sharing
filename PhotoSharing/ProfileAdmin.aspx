@@ -19,7 +19,13 @@
 
             <div id="divSearch">
 
-                <input id="searchBar" type="text" placeholder="Search..." />
+                <asp:TextBox ID="searchBar" placeholder="Search..." runat="server" OnTextChanged="Search"  />
+                
+                <asp:RadioButtonList ID="RadioButton1"  runat="server" RepeatDirection="Horizontal">
+                    <asp:ListItem Value ="1">Caregory</asp:ListItem>
+                    <asp:ListItem Value ="2">Location</asp:ListItem>
+                    <asp:ListItem Value ="3">Description</asp:ListItem>
+                </asp:RadioButtonList>
 
             </div>
 
@@ -46,10 +52,10 @@
         </div>
         <div id="divOptions">
             <div class="options">
-                <label id="optionPhotos">Photos</label>
+                <label id="optionPhotos">Comments</label>
             </div>
             <div class="options">
-                <asp:LinkButton Id="optionAlbums" runat="server" Font-Underline="False" OnClick="SeeAlbums">Albums</asp:LinkButton>
+                <asp:LinkButton Id="optionAlbums" runat="server" Font-Underline="False" OnClick="SeeAlbums">Photos</asp:LinkButton>
             </div>
         </div>
         

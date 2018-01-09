@@ -159,7 +159,7 @@ html, body {
 #divMenu {
     background-color: white;
     width: 1250px;
-    height: 650px;
+    height: 800px;
     display: block;
     margin: auto;
     margin-top: 20px;
@@ -177,7 +177,7 @@ html, body {
 
 #divMenuEdit {
     width: 800px;
-    height: 650px;
+    height: 800px;
     float: right;
 }
 
